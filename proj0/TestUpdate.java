@@ -33,18 +33,18 @@ public class TestUpdate {
 
 
     /**
-     *  Checks the Body class to make sure update works.
+     *  Checks the Planet class to make sure update works.
      */
     private static void checkUpdate() {
         System.out.println("Checking update...");
 
-        Body b1 = new Body(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
+        Planet p1 = new Planet(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
 
-        b1.update(2.0, 1.0, -0.5);
+        p1.update(2.0, 1.0, -0.5);
 
-        checkEquals(3.4, b1.xxVel, "xxVel update()", 0.01);
-        checkEquals(3.8, b1.yyVel, "yyVel update()", 0.01);
-        checkEquals(7.8, b1.xxPos, "xxPos update()", 0.01);
-        checkEquals(8.6, b1.yyPos, "yyPos update()", 0.01);
+        checkEquals(3.4, p1.xxVel, "xxVel update()", 0.01);
+        checkEquals(3.8, p1.yyVel, "yyVel update()", 0.01);
+        checkEquals(7.8, p1.xxPos, "xxPos update()", 0.01);
+        checkEquals(8.6, p1.yyPos, "yyPos update()", 0.01);
     }
 }

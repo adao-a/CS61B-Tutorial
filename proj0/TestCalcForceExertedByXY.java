@@ -47,18 +47,18 @@ public class TestCalcForceExertedByXY {
     }
 
     /**
-     *  Checks the Body class to make sure calcForceExertedByXY works.
+     *  Checks the Planet class to make sure calcForceExertedByXY works.
      */
     private static void checkCalcForceExertedByXY() {
         System.out.println("Checking calcForceExertedByX and calcForceExertedByY...");
 
-        Body b1 = new Body(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
-        Body b2 = new Body(2.0, 1.0, 3.0, 4.0, 4e11, "jupiter.gif");
-        Body b3 = new Body(4.0, 5.0, 3.0, 4.0, 5.0, "jupiter.gif");
+        Planet p1 = new Planet(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
+        Planet p2 = new Planet(2.0, 1.0, 3.0, 4.0, 4e11, "jupiter.gif");
+        Planet p3 = new Planet(4.0, 5.0, 3.0, 4.0, 5.0, "jupiter.gif");
 
-        checkEquals(b1.calcForceExertedByX(b2), 133.4, "calcForceExertedByX()", 0.01);
-        checkEquals(b1.calcForceExertedByX(b3), 4.002e-11, "calcForceExertedByX()", 0.01);
-        checkEquals(b1.calcForceExertedByY(b2), 0.0, "calcForceExertedByY()", 0.01);
-        checkEquals(b1.calcForceExertedByY(b3), 5.336e-11, "calcForceExertedByY()", 0.01);
+        checkEquals(p1.calcForceExertedByX(p2), 133.4, "calcForceExertedByX()", 0.01);
+        checkEquals(p1.calcForceExertedByX(p3), 4.002e-11, "calcForceExertedByX()", 0.01);
+        checkEquals(p1.calcForceExertedByY(p2), 0.0, "calcForceExertedByY()", 0.01);
+        checkEquals(p1.calcForceExertedByY(p3), 5.336e-11, "calcForceExertedByY()", 0.01);
     }
 }
