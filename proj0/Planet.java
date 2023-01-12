@@ -66,10 +66,11 @@ public class Planet {
         double fX = 0;
 
         for (Planet p : allPlanets) {
-            fX += this.calcForceExertedByX(p);
+
             if (this.equals(p)) {
                 continue; //no gravitational force on self
             }
+            fX += this.calcForceExertedByX(p);
         }
         return fX;
     }
@@ -79,10 +80,11 @@ public class Planet {
         double fY = 0;
 
         for (Planet p : allPlanets) {
-            fY += this.calcForceExertedByY(p);
+
             if (this.equals(p)) {
                 continue; //no gravitational force on self
             }
+            fY += this.calcForceExertedByY(p);
         }
         return fY;
     }
@@ -97,4 +99,9 @@ public class Planet {
         this.yyPos = this.yyPos + dt * yyVel;
 
     }
+
+    public void draw() {
+        StdDraw.picture(xxPos, yyPos, "./images/"+imgFileName);
+    }
+
 }
